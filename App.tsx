@@ -1,7 +1,9 @@
+import RootStack from './navigators/RootStack';
 import React from 'react';
-import Welcome from './screens/Welcome';
+// import Welcome from './screens/Welcome';
+
 const App = () => {
-  return <Welcome />;
+  return <RootStack />;
 };
 
 export default App;
