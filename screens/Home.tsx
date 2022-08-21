@@ -6,6 +6,7 @@ import styled from 'styled-components/native';
 import {colors} from '../components/colors';
 import {Container} from '../components/shared';
 import CardSection from '../components/Cards/CardSection';
+import TransactionSection from '../components/Transactions/TransactionSection';
 
 const HomeContainer = styled(Container)`
   background-color: ${colors.graylight};
@@ -41,10 +42,48 @@ const Home: FunctionComponent = () => {
       logo: logo2,
     },
   ];
+
+  const TransactionData = [
+    {
+      id: 1,
+      amount: '-86.00',
+      date: '14 Sept 2021',
+      title: 'Taxi',
+      subtitle: 'Uber Car',
+      art: {
+        background: colors.primary,
+        icon: 'car',
+      },
+    },
+    {
+      id: 2,
+      amount: '-236.00',
+      date: '20 Sept 2021',
+      title: 'Shopping',
+      subtitle: 'Amazon',
+      art: {
+        background: colors.tertiary,
+        icon: 'cart',
+      },
+    },
+    {
+      id: 3,
+      amount: '-786.00',
+      date: '14 Sept 2021',
+      title: 'Travel',
+      subtitle: 'Emirates',
+      art: {
+        background: colors.accent,
+        icon: 'airplane',
+      },
+    },
+  ];
+
   return (
     <HomeContainer>
       <StatusBar barStyle={'dark-content'} />
       <CardSection data={CardData} />
+      <TransactionSection data={TransactionData} />
     </HomeContainer>
   );
 };

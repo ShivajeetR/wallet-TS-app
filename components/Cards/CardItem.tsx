@@ -64,7 +64,9 @@ const CardItem: FunctionComponent<CardProps> = props => {
                 textStyles={{marginBottom: 5, color: colors.graylight}}>
                 Total Balance
               </SmallText>
-              <RegularText textStyles={{fontSize: 19}}>${props.balance}</RegularText>
+              <RegularText textStyles={{fontSize: 19}}>
+                ${props.balance}
+              </RegularText>
             </View>
             <Logo source={props.logo} />
           </CardRow>
