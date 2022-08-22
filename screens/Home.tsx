@@ -7,7 +7,7 @@ import {colors} from '../components/colors';
 import {Container} from '../components/shared';
 import CardSection from '../components/Cards/CardSection';
 import TransactionSection from '../components/Transactions/TransactionSection';
-
+import SendMoneySection from '../components/SendMoney/SendMoneySection';
 const HomeContainer = styled(Container)`
   background-color: ${colors.graylight};
   width: 100%;
@@ -17,6 +17,10 @@ const HomeContainer = styled(Container)`
 //card logos
 import logo1 from './../assets/visa_white.png';
 import logo2 from './../assets/mc.png';
+
+import portrait1 from './../assets/1.jpg';
+import portrait2 from './../assets/2.jpg';
+import portrait3 from './../assets/3.jpg';
 
 const Home: FunctionComponent = () => {
   const CardData = [
@@ -79,11 +83,36 @@ const Home: FunctionComponent = () => {
     },
   ];
 
+  const SendMoneyData = [
+    {
+      id: 1,
+      amount: '2450.00',
+      name: 'Wladmir Klitchko',
+      background: colors.tertiary,
+      img: portrait1,
+    },
+    {
+      id: 2,
+      amount: '250.00',
+      name: 'Tyson Fury',
+      background: colors.primary,
+      img: portrait2,
+    },
+    {
+      id: 1,
+      amount: '2022.00',
+      name: 'Sasha Usyk',
+      background: colors.accent,
+      img: portrait3,
+    },
+  ];
+
   return (
     <HomeContainer>
       <StatusBar barStyle={'dark-content'} />
       <CardSection data={CardData} />
       <TransactionSection data={TransactionData} />
+      <SendMoneySection data={SendMoneyData} />
     </HomeContainer>
   );
 };
