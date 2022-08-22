@@ -87,7 +87,7 @@ const Home: FunctionComponent = () => {
     {
       id: 1,
       amount: '2450.00',
-      name: 'Vitali Klitschko',
+      name: 'Mike Tyson',
       background: colors.tertiary,
       img: portrait1,
     },
