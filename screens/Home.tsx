@@ -2,7 +2,6 @@ import React, {FunctionComponent} from 'react';
 import {StatusBar} from 'react-native';
 import styled from 'styled-components/native';
 
-//custom components
 import {colors} from '../components/colors';
 import {Container} from '../components/shared';
 import CardSection from '../components/Cards/CardSection';
@@ -14,7 +13,6 @@ const HomeContainer = styled(Container)`
   flex: 1;
 `;
 
-//card logos
 import logo1 from './../assets/visa_white.png';
 import logo2 from './../assets/mc.png';
 
