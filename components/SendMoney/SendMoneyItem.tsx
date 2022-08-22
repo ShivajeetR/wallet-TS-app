@@ -1,6 +1,12 @@
+{
+  /* eslint-disable no-lone-blocks */
+  /* eslint-disable react/self-closing-comp */
+  /* eslint-disable no-alert */
+  /* eslint-disable react-native/no-inline-styles */
+}
+
 import React, {FunctionComponent} from 'react';
 import styled from 'styled-components/native';
-import {View} from 'react-native';
 
 import {colors} from '../colors';
 import RegularText from '../Texts/RegularText';
@@ -26,18 +32,19 @@ const SendMoneyItem: FunctionComponent<SendMoneyProps> = props => {
       style={{backgroundColor: props.background}}
       onPress={() => {
         alert('Send Money!');
-        <View>
-          <Profile img={props.img} imgContainerStyle={{marginBottom: 10}} />
-          <SmallText
-            textStyles={{textAlign: 'left', color: colors.white, fontSize: 12}}>
-            {props.name}
-          </SmallText>
-          <RegularText
-            textStyles={{color: colors.white, textAlign: 'left', fontSize: 13}}>
-            {props.amount}
-          </RegularText>
-        </View>;
-      }}></SendMoneyItemContainer>
+      }}>
+      <>
+        <Profile img={props.img} imgContainerStyle={{marginBottom: 10}} />
+        <SmallText
+          textStyles={{textAlign: 'left', color: colors.white, fontSize: 12}}>
+          {props.name}
+        </SmallText>
+        <RegularText
+          textStyles={{color: colors.white, textAlign: 'left', fontSize: 13}}>
+          {props.amount}
+        </RegularText>
+      </>
+    </SendMoneyItemContainer>
   );
 };
 
